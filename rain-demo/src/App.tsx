@@ -4,11 +4,14 @@ import AccordionAttendeeMain  from "./components/accordion-attendee-main/accordi
 
 
 function App() {
-  return <div className="app">
-    <MainHeaderBar /> 
-    <FormHeaderMainTitle />
-    <AccordionAttendeeMain />
-    
+  return <div className="main-page">
+    <div className="form-wrapper">
+      <div className="main-form-body">
+        <MainHeaderBar /> 
+        <FormHeaderMainTitle />
+        <AccordionAttendeeMain />
+      </div>
+    </div>
   </div>;
 }
 

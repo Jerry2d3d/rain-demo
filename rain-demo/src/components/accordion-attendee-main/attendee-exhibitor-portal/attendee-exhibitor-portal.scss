@@ -1,0 +1,96 @@
+@use "../../../styles/theme" as t;
+@use "../../../styles/colors" as c;
+@use "../../../styles/variables" as v;
+@use "../../../styles/mixins" as m;
+
+.accordion-attendee-steps {
+	@include m.col;
+	gap: 0.5rem;
+	.accordion-attendee-steps-text {
+		font-size: v.$page-h4;
+		font-weight: 400;
+		@include m.margin-b-se;
+		strong {
+			font-weight: 700;
+			margin: 0.25rem;
+		}
+	}
+	.attendee-exhibitor-portal {
+		@include m.col;
+		padding: 40px;
+		background-color: #393551;
+		gap: 1rem;
+		.attendee-exhibitor-portal-col2 {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			border-radius: 0.25rem;
+			gap: 1rem;
+			.attendee-reg-portal-box {
+				@include m.col;
+				padding: 1.5rem 2rem;
+				border-radius: 0.25rem;
+				border: 1px solid c.$general-form-infobox-border;
+				gap: 0.25rem;
+				height: 4.5rem;
+				.attendee-reg-portal-box-header {
+					@include m.row;
+					gap: 0.5rem;
+					align-items: center;
+					.attendee-reg-portal-box-header-icon {
+						max-width: 24px;
+						img {
+							aspect-ratio: 1;
+						}
+					}
+					label {
+						font-weight: 700;
+						color: white;
+						font-size: v.$general-form-information-label;
+					}
+				}
+				p {
+					color: white;
+					font-size: v.$general-form-information-info;
+					@include m.margin-b-se;
+				}
+			}
+		}
+		.attendee-exhibitor-portal-col3 {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			border-radius: 0.25rem;
+			gap: 1rem;
+			.attendee-reg-portal-box {
+				@include m.col;
+				padding: 1.5rem 2rem;
+				border-radius: 0.25rem;
+				border: 1px solid c.$general-form-infobox-border;
+				gap: 0.25rem;
+				height: 4.5rem;
+
+				.attendee-reg-portal-box-header {
+					@include m.row;
+					gap: 0.5rem;
+					align-items: center;
+					.attendee-reg-portal-box-header-icon {
+						max-width: 24px;
+						img {
+							aspect-ratio: 1;
+						}
+					}
+					label {
+						font-weight: 700;
+						color: white;
+						font-size: v.$general-form-information-label;
+					}
+				}
+				p {
+					color: white;
+					font-size: v.$general-form-information-info;
+					@include m.margin-b-se;
+				}
+			}
+		}
+	}
+	
+}

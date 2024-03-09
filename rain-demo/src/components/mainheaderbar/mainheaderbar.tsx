@@ -1,11 +1,12 @@
 import './mainheaderbar.scss';
+import rainlogo from '../../assets/rainfocus-summit-logo.png';
 
 
 const MainHeaderBar = () => {
 	return (
 		<div className="header-bar">
             <div className="header-bar-logo">
-                <img src="../../assets/rainfocus-summit-logo.png" alt="logo" />
+                <img src={rainlogo}alt="logo" />
             </div>
                     <div className="header-bar-info">
                         <h1 className="page-title">RainFocus Summit</h1>
