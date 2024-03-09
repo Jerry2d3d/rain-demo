@@ -1,0 +1,203 @@
+@use "../../../styles/theme" as t;
+@use "../../../styles/colors" as c;
+@use "../../../styles/variables" as v;
+@use "../../../styles/mixins" as m;
+
+.accordion-attendee {
+	@include m.col;
+	gap: 1.5rem;
+	border-radius: 0.25rem;
+	border-top: 1px solid c.$form-top-border;
+	padding: 1.5rem 0 0 0;
+	.accordion-attendee-header {
+		@include m.row;
+		gap: 1.5rem;
+		.accordion-attendee-header-title {
+			@include m.margin-b-se;
+			font-size: v.$page-h3;
+		}
+		.accordion-attendee-header-icon {
+			max-width: 35px;
+			img {
+				aspect-ratio: 1;
+			}
+		}
+	}
+	.accordion-attendee-steps {
+		@include m.col;
+		gap: 0.5rem;
+		.accordion-attendee-steps-text {
+			font-size: v.$page-h4;
+			font-weight: 400;
+			@include m.margin-b-se;
+			strong {
+				font-weight: 700;
+				margin: 0.25rem;
+			}
+		}
+		.general-form-information {
+			@include m.row;
+			border: 1px solid c.$general-form-infobox-border;
+			border-radius: 0.25rem;
+			padding: 1rem 1.5rem;
+			gap: 2rem;
+			.general-form-information-info-box {
+				@include m.col;
+				padding: 0.5rem;
+				border-radius: 0.25rem;
+				gap: 0.25rem;
+			   
+				label {
+					font-weight: 700;
+					font-size: v.$general-form-information-label;
+				}
+				p {
+					font-size: v.$general-form-information-info;
+					@include m.margin-b-se;
+					width: 205px;
+				}
+			}
+		}
+		.attendee-reg-portal {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			border-radius: 0.25rem;
+			gap: 1rem;
+			.attendee-reg-portal-box {
+				@include m.col;
+				padding: 1.5rem 2rem;
+				border-radius: 0.25rem;
+				border: 1px solid c.$general-form-infobox-border;
+				gap: 0.25rem;
+				height: 4.5rem;
+				.attendee-reg-portal-box-header {
+					@include m.row;
+					gap: 0.5rem;
+					align-items: center;
+					.attendee-reg-portal-box-header-icon {
+						max-width: 24px;
+						img {
+							aspect-ratio: 1;
+						}
+					}
+					label {
+						font-weight: 700;
+						color: c.$attendee-reg-portal-header-label;
+						font-size: v.$general-form-information-label;
+					}
+				}
+				p {
+					font-size: v.$general-form-information-info;
+					@include m.margin-b-se;
+					width: 205px;
+				}
+			}
+			.attendee-reg-portal-box-add {
+				@include m.col;
+				padding: 1.5rem 2rem;
+				border-radius: 0.25rem;
+				border: 1px solid c.$general-form-infobox-border;
+				gap: 0.25rem;
+				height: 4.5rem;
+				justify-content: center;
+				align-items: center;
+				.attendee-reg-portal-box-header {
+					@include m.row;
+					gap: 0.5rem;
+					align-items: center;
+					.attendee-reg-portal-box-header-icon {
+						max-width: 24px;
+						img {
+							aspect-ratio: 1;
+						}
+					}
+				}
+				p {
+					font-size: v.$general-form-information-info;
+					@include m.margin-b-se;
+					width: 205px;
+					text-align: center;
+				}
+			}
+		}
+		.attendee-exhibitor-portal {
+			@include m.col;
+			padding: 40px;
+			background-color: #393551;
+			gap: 1rem;
+			.attendee-exhibitor-portal-col2 {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				border-radius: 0.25rem;
+				gap: 1rem;
+				.attendee-reg-portal-box {
+					@include m.col;
+					padding: 1.5rem 2rem;
+					border-radius: 0.25rem;
+					border: 1px solid c.$general-form-infobox-border;
+					gap: 0.25rem;
+					height: 4.5rem;
+					.attendee-reg-portal-box-header {
+						@include m.row;
+						gap: 0.5rem;
+						align-items: center;
+						.attendee-reg-portal-box-header-icon {
+							max-width: 24px;
+							img {
+								aspect-ratio: 1;
+							}
+						}
+						label {
+							font-weight: 700;
+							color: white;
+							font-size: v.$general-form-information-label;
+						}
+					}
+					p {
+						color: white;
+						font-size: v.$general-form-information-info;
+						@include m.margin-b-se;
+					}
+				}
+			}
+			.attendee-exhibitor-portal-col3 {
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr;
+				border-radius: 0.25rem;
+				gap: 1rem;
+				.attendee-reg-portal-box {
+					@include m.col;
+					padding: 1.5rem 2rem;
+					border-radius: 0.25rem;
+					border: 1px solid c.$general-form-infobox-border;
+					gap: 0.25rem;
+					height: 4.5rem;
+
+					.attendee-reg-portal-box-header {
+						@include m.row;
+						gap: 0.5rem;
+						align-items: center;
+						.attendee-reg-portal-box-header-icon {
+							max-width: 24px;
+							img {
+								aspect-ratio: 1;
+							}
+						}
+						label {
+							font-weight: 700;
+							color: white;
+							font-size: v.$general-form-information-label;
+						}
+					}
+					p {
+						color: white;
+						font-size: v.$general-form-information-info;
+						@include m.margin-b-se;
+					}
+				}
+			}
+		}
+		
+	}
+
+}

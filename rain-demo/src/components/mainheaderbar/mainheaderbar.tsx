@@ -1,5 +1,6 @@
 import './mainheaderbar.scss';
 
+
 const MainHeaderBar = () => {
 	return (
 		<div className="header-bar">

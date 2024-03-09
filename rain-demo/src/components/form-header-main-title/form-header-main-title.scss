@@ -1,0 +1,14 @@
+@use "../../styles/variables" as v;
+@use "../../styles/mixins" as m;
+
+.form-header-main-title {
+	@include m.col;
+	gap: 1rem;
+	.sub-header-form {
+		@include m.margin-b-se;
+		font-size: v.$page-h2;
+	}
+	.sub-header-form-subtitle {
+		
+	}
+}
