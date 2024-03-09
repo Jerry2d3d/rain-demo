@@ -1,0 +1,282 @@
+@use "./styles/colors" as c;
+@use "./styles/variables" as v;
+@use "./styles/mixins" as m;
+
+.col {
+    @include m.col;
+}
+.row {
+    @include m.row;
+}
+.page-title {
+    font-size: v.$page-h1;
+    @include m.margin-b-se;
+}
+.event-date, .location-info, .sub-header-form-subtitle {
+    font-size: v.$page-title-subtitle-font-size;
+    @include m.margin-b-se;
+}
+
+.edit-event-button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    font-weight: 700;
+    line-height: 16.94px;
+    font-size: v.$edit-button-font-size;
+    background-color: c.$edit-event-button;
+    color: c.$edit-event-button-text-color;
+}
+
+
+/*-------- Component --------*/
+
+.main-page {
+ margin: 0;
+}
+.form-wrapper {
+    background-color: c.$form-wrapper-background-color;
+    display: flex;
+    justify-content: center;
+}
+.main-form-body {
+    background-color: c.$main-form-body-background-color;
+    @include m.col;
+    width: 100svw;
+    max-width: v.$max-form-page-size;
+    padding: 2.5rem 3rem;
+    gap: 2.5rem;
+
+    .header-bar {
+        @include m.row;
+        gap: 1rem;
+        .header-bar-logo {
+            max-width: 89px;
+            img {
+                aspect-ratio: 1;
+            }
+        }
+        .header-bar-info {
+            @include m.col;
+            gap: 0.5rem;
+            flex: 1 1 auto;
+            .page-title-subtitle {
+                @include m.col;
+                gap: 0.25rem;
+            }
+        }
+        .header-bar-button {
+            @include m.col;
+        }   
+    }
+    .form-header-main-title {
+        @include m.col;
+        gap: 1rem;
+        .sub-header-form {
+            @include m.margin-b-se;
+            font-size: v.$page-h2;
+        }
+        .sub-header-form-subtitle {
+            
+        }
+    }
+    .accordion-attendee {
+        @include m.col;
+        gap: 1.5rem;
+        border-radius: 0.25rem;
+        border-top: 1px solid c.$form-top-border;
+        padding: 1.5rem 0 0 0;
+        .accordion-attendee-header {
+            @include m.row;
+            gap: 1.5rem;
+            .accordion-attendee-header-title {
+                @include m.margin-b-se;
+                font-size: v.$page-h3;
+            }
+            .accordion-attendee-header-icon {
+                max-width: 35px;
+                img {
+                    aspect-ratio: 1;
+                }
+            }
+        }
+        .accordion-attendee-steps {
+            @include m.col;
+            gap: 0.5rem;
+            .accordion-attendee-steps-text {
+                font-size: v.$page-h4;
+                font-weight: 400;
+                @include m.margin-b-se;
+                strong {
+                    font-weight: 700;
+                    margin: 0.25rem;
+                }
+            }
+            .general-form-information {
+                @include m.row;
+                border: 1px solid c.$general-form-infobox-border;
+                border-radius: 0.25rem;
+                padding: 1rem 1.5rem;
+                gap: 2rem;
+                .general-form-information-info-box {
+                    @include m.col;
+                    padding: 0.5rem;
+                    border-radius: 0.25rem;
+                    gap: 0.25rem;
+                   
+                    label {
+                        font-weight: 700;
+                        font-size: v.$general-form-information-label;
+                    }
+                    p {
+                        font-size: v.$general-form-information-info;
+                        @include m.margin-b-se;
+                        width: 205px;
+                    }
+                }
+            }
+            .attendee-reg-portal {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                border-radius: 0.25rem;
+                gap: 1rem;
+                .attendee-reg-portal-box {
+                    @include m.col;
+                    padding: 1.5rem 2rem;
+                    border-radius: 0.25rem;
+                    border: 1px solid c.$general-form-infobox-border;
+                    gap: 0.25rem;
+                    height: 4.5rem;
+                    .attendee-reg-portal-box-header {
+                        @include m.row;
+                        gap: 0.5rem;
+                        align-items: center;
+                        .attendee-reg-portal-box-header-icon {
+                            max-width: 24px;
+                            img {
+                                aspect-ratio: 1;
+                            }
+                        }
+                        label {
+                            font-weight: 700;
+                            color: c.$attendee-reg-portal-header-label;
+                            font-size: v.$general-form-information-label;
+                        }
+                    }
+                    p {
+                        font-size: v.$general-form-information-info;
+                        @include m.margin-b-se;
+                        width: 205px;
+                    }
+                }
+                .attendee-reg-portal-box-add {
+                    @include m.col;
+                    padding: 1.5rem 2rem;
+                    border-radius: 0.25rem;
+                    border: 1px solid c.$general-form-infobox-border;
+                    gap: 0.25rem;
+                    height: 4.5rem;
+                    justify-content: center;
+                    align-items: center;
+                    .attendee-reg-portal-box-header {
+                        @include m.row;
+                        gap: 0.5rem;
+                        align-items: center;
+                        .attendee-reg-portal-box-header-icon {
+                            max-width: 24px;
+                            img {
+                                aspect-ratio: 1;
+                            }
+                        }
+                    }
+                    p {
+                        font-size: v.$general-form-information-info;
+                        @include m.margin-b-se;
+                        width: 205px;
+                        text-align: center;
+                    }
+                }
+            }
+            .attendee-exhibitor-portal {
+                @include m.col;
+                padding: 40px;
+                background-color: #393551;
+                gap: 1rem;
+                .attendee-exhibitor-portal-col2 {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    border-radius: 0.25rem;
+                    gap: 1rem;
+                    .attendee-reg-portal-box {
+                        @include m.col;
+                        padding: 1.5rem 2rem;
+                        border-radius: 0.25rem;
+                        border: 1px solid c.$general-form-infobox-border;
+                        gap: 0.25rem;
+                        height: 4.5rem;
+                        .attendee-reg-portal-box-header {
+                            @include m.row;
+                            gap: 0.5rem;
+                            align-items: center;
+                            .attendee-reg-portal-box-header-icon {
+                                max-width: 24px;
+                                img {
+                                    aspect-ratio: 1;
+                                }
+                            }
+                            label {
+                                font-weight: 700;
+                                color: white;
+                                font-size: v.$general-form-information-label;
+                            }
+                        }
+                        p {
+                            color: white;
+                            font-size: v.$general-form-information-info;
+                            @include m.margin-b-se;
+                        }
+                    }
+                }
+                .attendee-exhibitor-portal-col3 {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    border-radius: 0.25rem;
+                    gap: 1rem;
+                    .attendee-reg-portal-box {
+                        @include m.col;
+                        padding: 1.5rem 2rem;
+                        border-radius: 0.25rem;
+                        border: 1px solid c.$general-form-infobox-border;
+                        gap: 0.25rem;
+                        height: 4.5rem;
+
+                        .attendee-reg-portal-box-header {
+                            @include m.row;
+                            gap: 0.5rem;
+                            align-items: center;
+                            .attendee-reg-portal-box-header-icon {
+                                max-width: 24px;
+                                img {
+                                    aspect-ratio: 1;
+                                }
+                            }
+                            label {
+                                font-weight: 700;
+                                color: white;
+                                font-size: v.$general-form-information-label;
+                            }
+                        }
+                        p {
+                            color: white;
+                            font-size: v.$general-form-information-info;
+                            @include m.margin-b-se;
+                        }
+                    }
+                }
+            }
+            
+        }
+
+    }
+
+}
+
