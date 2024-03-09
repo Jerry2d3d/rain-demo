@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&display=swap");
+.header-bar {
+  display: flex;
+  gap: 1rem;
+}
+.header-bar .header-bar-logo {
+  max-width: 89px;
+}
+.header-bar .header-bar-logo img {
+  aspect-ratio: 1;
+}
+.header-bar .header-bar-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1 1 auto;
+}
+.header-bar .header-bar-info .page-title-subtitle {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.header-bar .header-bar-button {
+  display: flex;
+  flex-direction: column;
+}/*# sourceMappingURL=mainheaderbar.css.map */

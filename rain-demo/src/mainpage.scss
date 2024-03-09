@@ -1,6 +1,8 @@
+@use "./styles/theme" as t;
 @use "./styles/colors" as c;
 @use "./styles/variables" as v;
 @use "./styles/mixins" as m;
+
 
 .col {
     @include m.col;

@@ -1,0 +1,27 @@
+@use "../../styles/theme" as t;
+@use "../../styles/colors" as c;
+@use "../../styles/variables" as v;
+@use "../../styles/mixins" as m;
+
+.header-bar {
+	@include m.row;
+	gap: 1rem;
+	.header-bar-logo {
+		max-width: 89px;
+		img {
+			aspect-ratio: 1;
+		}
+	}
+	.header-bar-info {
+		@include m.col;
+		gap: 0.5rem;
+		flex: 1 1 auto;
+		.page-title-subtitle {
+			@include m.col;
+			gap: 0.25rem;
+		}
+	}
+	.header-bar-button {
+		@include m.col;
+	}   
+}
