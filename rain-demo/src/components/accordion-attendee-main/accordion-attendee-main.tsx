@@ -19,7 +19,7 @@ const AccordionAttendeeMain = () => {
             <AccordionAttendeeGeneral />
             <AccordionAttendeeRegPortal />
             <AccordionAttendePortal />
-            <AccordionAttendeExhibitorPortal />dd
+            <AccordionAttendeExhibitorPortal />
         </div>
     </div>;
 }
